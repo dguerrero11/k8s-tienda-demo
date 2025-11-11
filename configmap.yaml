@@ -1,0 +1,75 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tienda-html
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tienda Online - Demo ArgoCD</title>
+        <style>
+            * { margin: 0; padding: 0; box-sizing: border-box; }
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+            }
+            .container {
+                background: white;
+                border-radius: 20px;
+                padding: 40px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+                max-width: 800px;
+                width: 100%;
+            }
+            h1 {
+                color: #667eea;
+                font-size: 2.5em;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            .badge {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 10px 20px;
+                border-radius: 25px;
+                display: inline-block;
+                margin: 10px 5px;
+                font-size: 0.9em;
+            }
+            .info-box {
+                background: #f5f7fa;
+                padding: 20px;
+                border-radius: 10px;
+                margin: 20px 0;
+                border-left: 4px solid #667eea;
+            }
+            .success {
+                color: #27ae60;
+                font-weight: bold;
+                font-size: 1.2em;
+                text-align: center;
+                margin: 20px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>🚀 Tienda Online - Demo</h1>
+            <div class="success">✅ ¡Aplicación desplegada con ArgoCD GitOps!</div>
+            <div class="info-box">
+                <h2 style="color: #667eea; margin-bottom: 10px;">📦 Información del Despliegue</h2>
+                <p><strong>Versión:</strong> <span class="badge">v1.0</span></p>
+                <p><strong>Desplegado con:</strong> <span class="badge">ArgoCD</span></p>
+                <p><strong>Metodología:</strong> <span class="badge">GitOps</span></p>
+            </div>
+        </div>
+    </body>
+    </html>
